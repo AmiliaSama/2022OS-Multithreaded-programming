@@ -1,6 +1,6 @@
 # 2022OS-Multithreaded-programming
 
-This project on [github](https://github.com/AmiliaSama/2022OS-Multithreaded-programming)
+This project on github:https://github.com/AmiliaSama/2022OS-Multithreaded-programming
 
 [Lab02](Lab02.pdf)
 

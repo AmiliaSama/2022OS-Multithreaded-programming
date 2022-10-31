@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 // gcc -o msa Multithreaded_Sorting_Application.c -lpthread
+/*
+/@Author Liu Jiapeng
+/
+*/
 #define MAX_NUM 50
 int origion_num[MAX_NUM];
 int sorted_num[MAX_NUM];
@@ -12,6 +16,7 @@ typedef struct {
     int l, r;
 } datas;
 
+// 快排
 void *sort(void *args) {
     datas *sort_data = (datas *)args;
     int start = sort_data->l, end = sort_data->r;
@@ -36,7 +41,7 @@ void *sort(void *args) {
     sort(&n2);
     return NULL;
 }
-
+// 归并
 void *merge(void *args) {
     int *divide = (int *)args;
     int i = 0, j = *divide, p = *divide + 1, q = len - 1;
@@ -83,5 +88,6 @@ int main() {
     for (int i = 0; i < len; i++) {
         printf("%d ", sorted_num[i]);
     }
+    putchar('\n');
     return 0;
 }
